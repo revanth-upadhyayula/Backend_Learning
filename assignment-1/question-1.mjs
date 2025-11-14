@@ -1,0 +1,27 @@
+/**
+ * Implement a function functionLength, to return the number of 
+ * parameters a function expects. Note that this is a static value 
+ * defined by the function, not the number of arguments the function 
+ * is called with (which is determined by arguments.length
+ * 
+ *  Example:
+    function foo() {}
+    function bar(a) {}
+    function baz(a, b) {}
+
+    functionLength(foo); // 0
+    functionLength(bar); // 1
+    functionLength(baz); // 2
+ */
+    function foo() {}
+    function bar(a,undefined) {}
+    function baz(a, b) {}
+    
+    
+    
+    export default function functionLength(fn) {
+        return fn.length;
+    }
+    console.log(functionLength(foo)); // 0
+    console.log(functionLength(bar)); // 1
+    console.log(functionLength(baz)); // 2

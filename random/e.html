@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Image Classification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f8fb;
+            color: #333;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .symbol {
+            font-size: 100px;
+            color: #007bff;
+            margin: 20px 0;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Medical Image Classification Platform</h1>
+    </header>
+
+    <div class="container">
+        <div class="symbol">&#x2695;</div> <!-- Medical symbol -->
+        <h2>Upload and Analyze Your Images</h2>
+        <p>Classify medical images and discover similar results with confidence scores.</p>
+        <form id="uploadForm">
+            <input type="file" id="imageUpload" name="images" multiple accept="image/*" style="margin-bottom: 20px;">
+            <br>
+            <button type="submit">Upload and Classify</button>
+        </form>
+        <div id="results" style="margin-top: 20px;"></div>
+    </div>
+
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const results = document.getElementById('results');
+            results.innerHTML = '<p style="color: #007bff;">Processing your images...</p>';
+
+            // Simulated result display (replace with actual backend integration)
+            setTimeout(() => {
+                results.innerHTML = `
+                    <h3>Results</h3>
+                    <p><strong>Uploaded Image:</strong> Sample.jpg</p>
+                    <p><strong>Predicted Class:</strong> Koilocytotic</p>
+                    <p><strong>Confidence:</strong> 96.3%</p>
+                    <h4>Top Similar Images</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li>Image_123.jpg - Similarity: 98.2%</li>
+                        <li>Image_045.jpg - Similarity: 97.5%</li>
+                        <li>Image_210.jpg - Similarity: 96.7%</li>
+                    </ul>
+                `;
+            }, 3000);
+        });
+    </script>
+</body>
+</html>

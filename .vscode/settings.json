@@ -1,0 +1,5 @@
+{
+    "livePreview.customExternalBrowser": "Chrome",
+    "git.ignoreLimitWarning": true,
+    "liveServer.settings.port": 5501
+}

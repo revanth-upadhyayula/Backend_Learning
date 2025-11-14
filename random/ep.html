@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&family=DM+Sans&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TwoHalves - Dashboard</title>
+    <link rel="stylesheet" href="ep.css">
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo-container"><img src="logo2.png" class="logo img" alt="Logo"></a>
+        <nav>
+            <ul>
+                <li><img src="profile.png" alt="Profile Icon" id="profileIcon" onclick="toggleProfileMenu()"></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Profile Dropdown -->
+    <div id="profileDropdown" class="profile-dropdown">
+        <a class="profile-button" onclick="editProfile()" id="Profile">Profile</a>
+        <a href="#">Logout</a>
+    </div>
+
+    <div class="container">
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <h1>Find Your Perfect Match</h1>
+            </header>
+
+            <section class="filters">
+                <label>Community: <input type="text" id="community" placeholder="e.g., Hindu"></label>
+                <label>Job Location: <input type="text" id="job_location" placeholder="e.g., San Francisco"></label>
+                <button onclick="searchProfiles()">Search</button>
+            </section>
+
+            <section id="profiles" class="profile-container">
+                <!-- Profile cards will be dynamically added here -->
+            </section>
+        </div>
+    </div>
+
+    <script src="ep.js"></script>
+</body>
+
+</html>
